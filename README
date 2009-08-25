@@ -1,13 +1,25 @@
 CalculateBusinessDays
 =====================
 
-Introduction goes here.
+Calculates the date for n business days from now, i.e. doesn't count Saturdays or Sundays. Will be adding ability to count business days in the past.
 
 
 Example
 =======
+Say today is Fri, 28 Aug 2009
 
-Example goes here.
+business_days_from_now(3)
 
+returns
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Wed, 02 Sep 2009
+
+or you can specify a start date like this
+
+business_days_from_now(7, Date.today + 3.days)
+
+or
+
+business_days_from_now(7, "Fri, 28 Aug 2009".to_date)
+
+Copyright (c) 2009 Creative Gale LLC, released under the MIT license
